@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.11)
-set(PROJECT_NAME project_base)
+set(PROJECT_NAME voxels)
 project(${PROJECT_NAME})
 
 function(watch)
@@ -43,7 +43,8 @@ include_directories(${CMAKE_BINARY_DIR}/configuration)
 
 include_directories(include/)
 add_executable(${PROJECT_NAME}
-        ${SOURCES})
+        ${SOURCES}
+        include/rg/Shader.h)
 
 target_link_libraries(${PROJECT_NAME} ${LIBS})
 
